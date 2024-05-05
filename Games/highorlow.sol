@@ -18,7 +18,7 @@ contract HighLowDiceRollGame {
         return msg.sender;
     }
 
-    // Function to place a bet on the outcome of the High-Low dice game []
+    // Function to place a bet on the outcome of the High-Low dice game [0 for High or 1 for Low]
     function placeBetAndRollDice(uint256 targetNumber, uint256 betAmount, HighLowChoice choice) external payable {
         // Validate the bet amount
         require(msg.value >= betAmount, "Insufficient bet amount");
