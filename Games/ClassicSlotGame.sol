@@ -69,7 +69,7 @@ contract ClassicSlotsGame {
     // Internal function to calculate the payout based on the symbols and pay lines
     function _calculatePayout(Symbol[] memory symbols) public view returns (uint256) {
         uint256 payout = 0;
-        for (uint256 i = 0; i < symbols.length; i++) {
+        for (uint256 i = 0; i < 3; i++) {
             payout += payLines[symbols[i]];
         }
         return payout;
