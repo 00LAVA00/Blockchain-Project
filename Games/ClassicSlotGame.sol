@@ -18,14 +18,15 @@ contract ClassicSlotsGame {
     // Event to log the result of a game round
     event GameResult(address player, Symbol[] symbols, uint256 payout);
 
+    //Cherry: [0,0,0]; Lemon: [1,1,1]; Orange: [2,2,2]; Bar: [3,3,3]; Seven: [4,4,4].
     constructor(address _randomWordLibraryAddress) {
         randomWordLibrary = RandomWordLibrary(_randomWordLibraryAddress); // Initialize with the RandomWordLibrary contract address
         // Initialize pay lines and payouts
-        payLines[Symbol.Cherry] = 2;
-        payLines[Symbol.Lemon] = 3;
-        payLines[Symbol.Orange] = 4;
-        payLines[Symbol.Bar] = 6;
-        payLines[Symbol.Seven] = 10;
+        payLines[Symbol.Cherry] = 2;            //Symbol: 0
+        payLines[Symbol.Lemon] = 3;             //Symbol: 1
+        payLines[Symbol.Orange] = 4;            //Symbol: 2
+        payLines[Symbol.Bar] = 6;               //Symbol: 3
+        payLines[Symbol.Seven] = 10;            //Symbol: 4
     }
 
     // Function to get the user's MetaMask address
