@@ -18,7 +18,7 @@ contract RockPaperScissorsGame {
         return msg.sender;
     }
 
-    // Define the possible choices in Rock, Paper, Scissors game
+    // Define the possible choices in Rock, Paper, Scissors game [Moves -> Rock : 0; Paper: 1, Scissors : 2]
     enum Choice { Rock, Paper, Scissors }
 
     // Event to log game outcomes
